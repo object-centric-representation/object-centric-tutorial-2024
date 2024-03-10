@@ -1,0 +1,311 @@
+
+ <!doctype html>
+<html>
+ <head>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+     <meta name="description" content="Few-shot Learning from Meta-Learning, Statistical Understanding to Applications">
+     <meta name="author" content="">
+ 
+     <title>Object-centric Representations in Computer Vision: CVPR 24 tutorial</title>
+ 
+     <!-- Bootstrap core CSS -->
+     <link href="css/bootstrap.min.css" rel="stylesheet">
+  
+     <!-- Custom Google Web Font -->
+     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+     <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+     <link href='http://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
+     
+     <!-- Custom CSS-->
+     <link href="css/general.css" rel="stylesheet">
+     
+      <!-- Owl-Carousel -->
+     <link href="css/custom.css" rel="stylesheet">
+     <link href="css/owl.carousel.css" rel="stylesheet">
+     <link href="css/owl.theme.css" rel="stylesheet">
+     <link href="css/style.css" rel="stylesheet">
+     <link href="css/animate.css" rel="stylesheet">
+     <link href="css/image.css" rel="stylesheet">
+     
+     <!-- Magnific Popup core CSS file -->
+     <link rel="stylesheet" href="css/magnific-popup.css"> 
+     
+     <script src="js/modernizr-2.8.3.min.js"></script>  
+ 
+ </head>
+ 
+ <body id="home">
+ 
+     <!-- Preloader -->
+     <div id="preloader">
+         <div id="status"></div>
+     </div>
+     
+     <!-- FullScreen -->
+     <div class="intro-header">
+         <div class="col-xs-12 text-center abcen1">
+             <h1 class="h1_home wow fadeIn" data-wow-delay="0.4s" style="text-shadow: 0 0 8px #000000;"> Object-centric Representations in Computer Vision</h1>
+             <h3 class="h3_home wow fadeIn" data-wow-delay="0.6s" style="text-shadow: 0px 8px 4px black, 0 0 25px black"> 
+                 <a style="color:white" href="https://cvpr2024.thecvf.com" target="_blank"><b>CVPR 2024</b></a> tutorial </p> 
+             </h3>
+         </div>    
+     </div>
+     
+     <!-- NavBar-->
+     <nav class="navbar-default" role="navigation">
+         <div class="container">
+             <div class="navbar-header">
+                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                     <span class="sr-only">Toggle navigation</span>
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                 </button>
+                 <a class="navbar-brand" href="#home">Object-Centric Representations 2024</a>
+             </div>
+ 
+             <div class="collapse navbar-collapse navbar-right navbar-ex1-collapse">
+                 <ul class="nav navbar-nav">
+                     
+                     <li class="menuItem"><a href="#scope">Home</a></li>
+                     <li class="menuItem"><a href="#program">Program</a></li>
+                     <li class="menuItem"><a href="#organizers">Organizers and Speakers</a></li>	
+                     <li class="menuItem"><a href="#contacts">Contact</a></li>
+                 </ul>
+             </div>
+            
+         </div>
+     </nav> 
+     
+     <!-- Scope -->
+     <div id ="scope" class="content-section-a" style="border-top: 0">
+ 
+         <div class="container">
+             
+             <div class="row">
+             
+                 <div class="wow fadeInRightBig" data-animation-delay="200"> 
+                     <h2 class="section-heading">CVPR 2024 Tutorial on "Object-Centric Representations in Computer Vision"</h2>
+                     <h3 class="section-heading">Introduction</h3>
+                     <p class="lead"  style="text-align:justify">
+                        This tutorial discusses the evolution of object-centric representation in computer vision and deep learning. Initially inspired by decomposing visual scenes into surfaces and objects, recent developments focus on learning causal variables from high-dimensional observations like images or videos. The tutorial covers the objectives of OCL, its development, and connections with machine learning fields, emphasizing object-centric approaches, especially in unsupervised segmentation. Advances in encoder, decoder, and self-supervised learning objectives are explored, with a focus on real-world applications and challenges. The tutorial also introduces open-source tools and showcases breakthroughs in video-based object-centric learning. The broader scope of object-centric representation is discussed, including applications in tasks like amodal video segmentation, Visual Language Navigation (VLN), Facial Appearance Editing (FAE), robotic grasping, and the PaLM-E model’s impact across various domains.</br>
+                        This tutorial will have four talks covering the basic ideas, learning good features for object-centric learning, video based object-centric representation, and more diverse real-world applications. We will summarize the main contents of each talk.
+                    </p>
+ 
+                     <h4 class="section-heading">Introduction of Object-Centric Representation, and Beyond</h4>
+                     <p class="lead"  style="text-align:justify">
+                        Decomposing visual scenes into sets of descriptive entities is both an old idea and a promising new direction for solving complex downstream tasks on visual data. In the early days of computer vision, scenes were decomposed in surfaces and objects, with features describing reflectances, albedo, and geometry. In the deep learning era, these concepts are being rediscovered with a twist: if a deep network learn to map an image into some of the elements that describe a scene, then we may hope that many tasks pertaining to the scene can be solved. This insight connects to the more general inverse problem of learning causal variables (in this case, high-level variables describing the scene) from high-dimensional observations (images or videos). The first part of the tutorial, will dive into the high-level objectives of OCL, it’s original development and connections with other fields in machine learning, in particular with causality.</br>
+                        More in detail, Francesco will cover the revive of object-centric approaches, developed from disentangled representations, into object discovery architectures,concretely measuring progress on unsupervised segmentation benchmarks. In the past few years, progress has significantly accelerated building on the scalable slot attention module and its integration in image and video models. Nowadays, the field evolved to scene decomposition models, leveraging both large visual backbones but also language models and 3D. At the same time, theoretical understanding from causal representation learning is catching up, with new results on identifiability guarantees for the scene decomposition. As slot-based models are scaling up, radically new ideas are also being proposed, for example, a new neuron model, that binds to specific information (i.e. can bind to objects) and allows to represent a scene in an object-centric format that is also distributed in the classical sense.
+                     </p>
+
+                     <h4 class="section-heading">Bridging the gap to real-world object-centric learning</h4>
+                     <p class="lead"  style="text-align:justify">
+                        The development of object-centric methods begins with relatively simple synthetic datasets to demonstrate proof of concept. Scaling these methods to the complexities of the real world is a significant challenge. In this talk, we will explore recent advancements aimed at narrowing the gap between object-centric learning and real-world image and video data processing, as the foundation to make real-world impact.</br>
+                        Tianjun will introduce these efforts in three aspects: the encoder, the decoder and the self-supervised learning objectives. Additionally, Tianjun will also introduce the open source toolbox for object-centric learning, released by AWS-Shanghai lab.
+
+                     </p>
+                     
+                     <h4 class="section-heading">Video-Based Object-centric Learning</h4>
+                     <p class="lead"  style="text-align:justify">
+                        Recent breakthroughs in video representation learning and the development of pre-trained vision-language models have paved the way for significant enhancements in self-supervised video-based object-centric learning tasks. In this presentation, Tong will showcase a series of works dedicated to video-based open-vocabulary object-centric learning.</br>
+                        Tong’s discussion will encompass various aspects, starting with the localization of objects in videos through slot attention, leveraging semantically named entities with the pre-trained CLIP model. The exploration extends to the development of a video object-centric model tailored for multiple-object tracking and addresses challenges related to object-centric video amodal tasks.</br>
+                        Moreover, Tong will provide insights into ongoing projects, shedding light on the utilization of the Segment Anything Model (SAM) to empower video-based object-centric learning. Join this talk to gain a comprehensive understanding of the cutting-edge advancements and innovative approaches driving progress in video-based object-centric learning.
+                     </p>
+                    
+                     <h4 class="section-heading">More Real-world Applications by Object-centric Representations</h4>
+                     <p class="lead"  style="text-align:justify">
+                        While the inception of object-centric learning was rooted in unsupervised segmentation tasks within the CLEVER dataset, recent years have witnessed a paradigm shift. Various object-centric learning methods have emerged, extending their application to a diverse array of real-world challenges. Yanwei Fu will delve into the broader scope of real-world applications facilitated by object-centric representation.</br>
+                        In this talk, Yanwei Fu will explore the versatility of object-centric representation, ranging from tasks like amodal video segmentation to the intricacies of Visual Language Navigation (VLN). The latter empowers agents to execute actions based on language instructions from humans, opening up new possibilities for human-AI interaction.</br>
+                        The discussion extends further to the innovative use of slot attention in Facial Appearance Editing (FAE). This involves the modification of physical attributes, such as pose, expression, and lighting, in human facial images while preserving crucial attributes like identity and background.</br>
+                        Notably, Yanwei Fu will shed light on the application of object-centric representation in robotic grasping, demonstrating its efficacy in real-world scenarios. The talk will also highlight its pivotal role in the PaLM-E model, showcasing the model’s capability and impact across various applications. 
+                     </p>
+
+                 </div>   
+             </div>
+         </div>
+         <!-- /.container -->
+     </div>
+ 
+     <!-- Program -->
+     <div id ="program" class="content-section-a">
+ 
+         <div class="container">				
+                 <div class="wow fadeInLeftBig" data-animation-delay="200">   
+                     <h3 class="section-heading">Program</h3>
+
+                 </div>
+             
+        <table class="table" style="width:100%">
+        <tr class="info">
+            <td><strong>Sessions
+            </strong></td>
+            <td>Title</td>
+            <!-- <td>Video</td> -->
+            <!-- <td>Slides</td> -->
+            <td>Speakers</td>
+            </tr>
+            <tr>
+                <td>10 min</td>
+                <td><strong>Opening Remarks &emsp;
+                </strong></td>
+                <!-- <td></td> -->
+                <!-- <td></td> -->
+                <td>Yanwei Fu</td>
+            </tr>
+        
+            <tr class="success">
+                <td>1 hour + 5 min Q&A</td>
+                <td><strong>Introduction of Object-Centric Representation, and Beyond &emsp;
+                </td>
+                <td>Francesco Locatello</td>
+            </tr>
+
+            <tr>
+                <td>40 min + 5 min Q&A</td>
+                <td><strong>Bridging the gap to real-world object-centric learning &emsp;
+                </td>
+                <td>Tianjun Xiao</td>
+            </tr>
+            
+            <tr class="success">
+            <td>15 min</td>
+            <td><strong>Break &emsp;
+            </strong></td>
+            <td></td>
+
+            </tr>
+
+            <tr>
+                <td>40 min + 5 min Q&A</td>
+                <td><strong>Video-Based Object-centric Learning &emsp;
+                </td>
+                <td>Tong He</td>
+            </tr>
+        
+            <tr class="success">
+                <td>1 hour + 5 min Q&A</td>
+                <td><strong>More Real-world Applications by Object-centric Representations &emsp;
+                </td>
+                <td>Yanwei Fu</td>
+            </tr>
+            </table>
+ 
+ 
+     </table>
+ 
+             <div class="container">				
+                 <div class="wow fadeInRightBig" data-animation-delay="200">
+                 </div>
+             </div>
+         </div>
+     </div>
+     
+     <!-- Organizers -->
+     <div id="organizers" class="content-section-a"> 
+         
+         <div class="container">
+                 <div class="row wow fadeInRightBig"  data-animation-delay="200">
+                 <h3 class="section-heading">Speakers</h3>
+ 
+                 <div class="col-sm-2 wow fadeInRightBig"  data-animation-delay="200">   
+                     <center><img  class="img-responsive img-rounded" style="border-radius: 50%" height="150" width="150" src="img/organizer/fuyanwei.png" alt=""></center>
+                     <h4 class="section-heading"><center><a href="https://yanweifu.github.io">Yanwei Fu</a></center></h4>
+                     <h5 class="section-heading"><center><i>Fudan University</i></center></h5>
+                  </div>
+
+                  <div class="col-sm-2 wow fadeInRightBig"  data-animation-delay="200">   
+                    <center><img  class="img-responsive img-rounded" style="border-radius: 50%" height="150" width="150" src="img/organizer/tianjun.jpeg" alt=""></center>
+                    <h4 class="section-heading"><center><a href="https://tianjunxiao.com/">Tianjun Xiao</a></center></h4>
+                    <h5 class="section-heading"><center><i>Amazon Web Service AI Shanghai Lab</i></center></h5>
+                 </div>
+
+                 <div class="col-sm-2 wow fadeInRightBig"  data-animation-delay="200">   
+                    <center><img  class="img-responsive img-rounded" style="border-radius: 50%" height="150" width="150" src="img/organizer/tong.jpeg" alt=""></center>
+                    <h4 class="section-heading"><center><a href="https://hetong007.github.io/">Tong He</a></center></h4>
+                    <h5 class="section-heading"><center><i>Amazon Web Service AI Shanghai Lab</i></center></h5>
+                 </div>
+                
+                 <div class="col-sm-2 wow fadeInRightBig"  data-animation-delay="200">   
+                    <center><img  class="img-responsive img-rounded" style="border-radius: 50%" height="150" width="150" src="img/organizer/francesco.jpeg" alt=""></center>
+                    <h4 class="section-heading"><center><a href="https://www.francescolocatello.com/">Francesco Locatello</a></center></h4>
+                    <h5 class="section-heading"><center><i>Institute of Science and Technology Austria</i></center></h5>
+                 </div>
+         </div>
+     </div>
+ 
+         <!-- /.container -->
+
+    <div id ="photos" class="content-section-a" style="border-top: 0">
+
+
+</div>
+     
+     <div id="contacts" class="content-section-c ">
+              <!-- Contacts -->
+         <div class="container">
+             <div class="row">
+             
+                 <!--div class="col-sm-6 pull-right wow fadeInRightBig">
+                     <img class="img-responsive " src="img/ipad.png" alt="">
+                 </div-->
+                 
+                 <div class="wow fadeInLeftBig" data-animation-delay="200">   
+                     <h3 class="section-heading" style="color:white">Contacts</h3>
+                     <!--div class="sub-title lead3">Lorem ipsum dolor sit atmet sit dolor greand fdanrh<br> sdfs sit atmet sit dolor greand fdanrh sdfs</div-->
+                     <p class="lead"  style="text-align:left;color:white">
+                         Contact the Organizing Committee: yanweifu@fudan.edu.cn, kfan21@m.fudan.edu.cn
+                     </p>
+                     
+                 </div>   				
+             </div>
+             <div class="row">
+             
+                         <div class="col-md-6 col-md-offset-3 text-center">
+                             <div >
+                                     <div class="morph-button ">
+                                         <button type="button"></button>
+                                         
+                                     </div>
+                             </div>
+                         </div>	
+             </div>
+ 
+         </div>
+     </div>	
+ 
+    
+     <footer>
+     
+     </footer>
+ 
+     <!-- JavaScript -->
+     <script src="js/jquery-1.10.2.js"></script>
+     <script src="js/bootstrap.js"></script>
+     <script src="js/owl.carousel.js"></script>
+     <script src="js/script.js"></script>
+     <!-- StikyMenu -->
+     <script src="js/stickUp.min.js"></script>
+     <script type="text/javascript">
+       jQuery(function($) {
+         $(document).ready( function() {
+           $('.navbar-default').stickUp();
+           
+         });
+       });
+     
+     </script>
+     <!-- Smoothscroll -->
+     <script type="text/javascript" src="js/jquery.corner.js"></script> 
+     <script src="js/wow.min.js"></script>
+     <script>
+      new WOW().init();
+     </script>
+     <script src="js/classie.js"></script>
+     <script src="js/uiMorphingButton_inflow.js"></script>
+     <!-- Magnific Popup core JS file -->
+     <script src="js/jquery.magnific-popup.js"></script> 
+ </body>
+ 
+ </html>
+ 
